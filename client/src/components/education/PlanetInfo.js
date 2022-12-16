@@ -1,7 +1,7 @@
 import React from 'react';
 
-const Education = () => {
-    return <div>education</div>;/// generate info about the planet
+const PlanetInfo = (planet) => {
+    return <div>PlanetInfo</div>;/// generate info about the planet
 };
 
-export default Education;
+export default PlanetInfo;
