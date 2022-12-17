@@ -1,7 +1,7 @@
 import React from 'react';
 import Planet from './Planet';
 
-const PlanetList = () => {
+const PlanetList = ({planets}) => {
     return (
         <ul>
             <Planet />

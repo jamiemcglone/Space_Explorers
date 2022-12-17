@@ -1,7 +1,7 @@
 import React from 'react';
 
-const Planet = () => {
-    return <li>Planet</li>; //// Linking to education via route Link
+const Planet = ({planets}) => {
+    return <li><img src={planets.planet.image} alt="planet image"/></li>; //// Linking to education via route Link
 };
 
 export default Planet;

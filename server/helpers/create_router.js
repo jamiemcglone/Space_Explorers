@@ -1,5 +1,5 @@
 const express = require('express');
-const ObjectID = require('mongodb').ObjectID;
+const ObjectId = require('mongodb').ObjectId;
 
 const createRouter = function (collection) {
     const router = express.Router();
@@ -19,7 +19,7 @@ const createRouter = function (collection) {
     router.get('/:id', (req, res) => {
         const id = req.params.id;
         collection
-            .findOne({ _id: ObjectID(id) })
+            .findOne({ _id: ObjectId(id) })
             .then((doc) => res.json(doc))
             .catch((err) => {
                 console.error(err);
@@ -30,10 +30,10 @@ const createRouter = function (collection) {
 
     //create new Guest
     router.post('/', (req, res) => {
-        const newGuest = req.body;
-        console.log('newGuest:', req);
+        const newPlayer = req.body;
+        console.log('newPlayer:', req);
         collection
-            .insertOne(newGuest)
+            .insertOne(newPlayer)
             .then((result) => {
                 res.json(result.ops[0]);////// NEEEDS TO UPDATE TO CURRENT MONGO
             })
@@ -44,7 +44,23 @@ const createRouter = function (collection) {
             });
     });
 
-
+    router.put('/:id', (req, res) => {
+        const id = req.params.id;
+        const updatedData = req.body;
+        collection
+        .updateOne(
+          { _id: ObjectId(id)},
+          { $set: updatedData }
+        )
+        .then((result) => {
+          res.json(result)
+        })
+        .catch((err) => {
+          console.error(err);
+          res.status(500);
+          res.json({ status: 500, error: err });
+        });
+    });
 
     return router;
 };
