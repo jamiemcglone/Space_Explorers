@@ -7,19 +7,20 @@ import { useState, useEffect } from 'react'
 
 
 
-const Homepage = () => {
+const Homepage = ({planets}) => {
 
-    const [planets, setPlanets] = useState([])
 
-    useEffect(() => {
-      PlanetService.getPlanets()
-        .then(planets => setPlanets(planets))
-    }, [])
+    // const [planets, setPlanets] = useState([])
+
+    // useEffect(() => {
+    //   PlanetService.getPlanets()
+    //     .then(planets => setPlanets(planets))
+    // }, [])
 
     return (
         <main>
-            <h1>Planuts</h1>
-            <Navigation planets={planets}/>
+            <h1>Planets</h1>
+            <Navigation planets = {planets}/>
             <Leaderboard />
             <PlayGameButton />
         </main>
