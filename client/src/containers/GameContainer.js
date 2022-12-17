@@ -1,7 +1,8 @@
 import React from 'react';
+import Canvas from '../components/game/Canvas';
 
 const GameContainer = () => {
-    return <div>Game</div>;
+    return <Canvas/>;
 };
 
 export default GameContainer;
