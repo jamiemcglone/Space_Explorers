@@ -2,13 +2,18 @@ import React from 'react';
 import Navigation from '../components/Navigation';
 import PlayGameButton from '../components/PlayGameButton';
 import Leaderboard from '../components/Leaderboard';
-import PlanetService from '../service/PlanetService';
+import PlayerService from '../service/PlayerService';
 import { useState, useEffect } from 'react'
 
 
 
 const Homepage = ({planets}) => {
-
+    const [allPlayers,setAllPlayers] = useState([]);
+    useEffect(() => {
+        PlayerService.getPlayers().then(players =>setAllPlayers(players))
+    }, []);
+    
+    console.log(allPlayers) 
 
     // const [planets, setPlanets] = useState([])
 
@@ -21,7 +26,7 @@ const Homepage = ({planets}) => {
         <main>
             <h1>Planets</h1>
             <Navigation planets = {planets}/>
-            <Leaderboard />
+            <Leaderboard players={allPlayers} />
             <PlayGameButton />
         </main>
     );

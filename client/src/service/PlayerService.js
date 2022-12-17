@@ -1,11 +1,9 @@
-const baseURL = 'http://localhost:9000/api/players/'
+const baseURL = 'http://localhost:9000/api/players/';
 
- const PlayerService = {
-  getPlayers() {
-    return fetch(baseURL)
-    .then(res => res.json())
-  },
+const PlayerService = {
+    getPlayers() {
+        return fetch(baseURL).then((res) => res.json());
+    },
+};
 
-}
-
-export default PlayerService
+export default PlayerService;
