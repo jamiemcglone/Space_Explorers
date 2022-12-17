@@ -7,7 +7,7 @@ import { useState, useEffect } from 'react'
 
 
 
-const Homepage = ({planets}) => {
+const HomepageContainer = ({planets}) => {
     const [allPlayers,setAllPlayers] = useState([]);
     useEffect(() => {
         PlayerService.getPlayers().then(players =>setAllPlayers(players))
@@ -32,4 +32,4 @@ const Homepage = ({planets}) => {
     );
 };
 
-export default Homepage;
+export default HomepageContainer;

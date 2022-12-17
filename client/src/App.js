@@ -1,7 +1,7 @@
 import './App.css';
-import Homepage from './containers/Homepage';
+import HomepageContainer from './containers/HomepageContainer';
 import Header from './components/Header';
-import Game from './containers/Game';
+import GameContainer from './containers/GameContainer';
 import PlanetInfo from './components/education/PlanetInfo';
 import PlanetService from './service/PlanetService';
 import {  Routes, Route } from 'react-router-dom';
@@ -20,8 +20,8 @@ function App() {
             <Header />
 
             <Routes>
-                <Route path='/' element={<Homepage planets={allPlanets} />} />
-                <Route path='/game' element={<Game />} />
+                <Route path='/' element={<HomepageContainer planets={allPlanets} />} />
+                <Route path='/game' element={<GameContainer />} />
                 <Route path='/sun' element={<PlanetInfo planet={allPlanets[0]} />} />
                 <Route path='/mercury' element={<PlanetInfo planet={allPlanets[1]} />} />
                 <Route path='/venus' element={<PlanetInfo planet={allPlanets[2]}/>} />
