@@ -18,7 +18,7 @@ db.players.insertMany([
 
 ]);
 db.planets.insertMany([
-    {planet:{
+    {
         name: "Sun",
         image: "/space_explorers/client/images/sun.png",
         questions:[
@@ -34,11 +34,11 @@ db.planets.insertMany([
             }
         ],
         general_info:"balblablalbal"// extend later on to an accordion with fun facts
-    }
+    
     },
-    {planet:{
+    {
         name: "Mercury",
-        image: "/space_explorers/client/images/mercury.png",
+        image: "./images/mercury.png",
         questions:[
             {
                 question: 'blabla',
@@ -53,8 +53,8 @@ db.planets.insertMany([
         ],
         general_info:"balblablalbal"// extend later on to an accordion with fun facts
     }
-    },
-    {planet:{
+    ,
+    {
         name: "Venus",
         image: "/space_explorers/client/images/venus.png",
         questions:[
@@ -71,8 +71,8 @@ db.planets.insertMany([
         ],
         general_info:"balblablalbal"// extend later on to an accordion with fun facts
     }
-    },
-    {planet:{
+,
+    {
         name: "Earth",
         image: "/space_explorers/client/images/earth.png",
         questions:[
@@ -89,8 +89,8 @@ db.planets.insertMany([
         ],
         general_info:"balblablalbal"// extend later on to an accordion with fun facts
     }
-    },
-    {planet:{
+    ,
+    {
         name: "Mars",
         image: "/space_explorers/client/images/mars.png",
         questions:[
@@ -107,8 +107,8 @@ db.planets.insertMany([
         ],
         general_info:"balblablalbal"// extend later on to an accordion with fun facts
     }
-    },
-    {planet:{
+    ,
+    {
         name: "Jupiter",
         image: "/space_explorers/client/images/jupiter.png",
         questions:[
@@ -125,8 +125,8 @@ db.planets.insertMany([
         ],
         general_info:"balblablalbal"// extend later on to an accordion with fun facts
     }
-    },
-    {planet:{
+    ,
+    {
         name: "Saturn",
         image: "/space_explorers/client/images/saturn.png",
         questions:[
@@ -143,8 +143,8 @@ db.planets.insertMany([
         ],
         general_info:"balblablalbal"// extend later on to an accordion with fun facts
     }
-    },
-    {planet:{
+    ,
+    {
         name: "Uranus",
         image: "/space_explorers/client/images/uranus.png",
         questions:[
@@ -161,8 +161,8 @@ db.planets.insertMany([
         ],
         general_info:"balblablalbal"// extend later on to an accordion with fun facts
     }
-    },
-    {planet:{
+    ,
+    {
         name: "Neptune",
         image: "/space_explorers/client/images/neptune.png",
         questions:[
@@ -179,8 +179,8 @@ db.planets.insertMany([
         ],
         general_info:"balblablalbal"// extend later on to an accordion with fun facts
     }
-    },
-    {planet:{
+    ,
+    {
         name: "Pluto",
         image: "/space_explorers/client/images/pluto.png",
         questions:[
@@ -197,5 +197,5 @@ db.planets.insertMany([
         ],
         general_info:"balblablalbal"// extend later on to an accordion with fun facts
     }
-    },
+    ,
 ]);
