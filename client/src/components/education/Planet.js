@@ -3,6 +3,7 @@ import PlanetInfo from './PlanetInfo.js'
 // import { useLocation } from 'react-router-dom';
 // const location = useLocation();
 
+
 const Planet = (planet) => {
 
     const handlePlanetClick = (planet) => {
