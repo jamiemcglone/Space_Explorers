@@ -1,8 +1,9 @@
 import React from 'react';
 import QuizPlanetList from './QuizPlanetList';
-import { useState, useEffect } from 'react';
+import EndGameScreen from './EndGameScreen';
+import { useState} from 'react';
 import './Canvas.css';
-import PlanetService from '../../service/PlanetService';
+
 
 const Canvas = () => {
     const [x, setX] = useState(0);
@@ -11,6 +12,7 @@ const Canvas = () => {
     const planet1Position = { x: 0, y: 0 };
     const planet2Position = { x: 150, y: 150 };
     const planet3Position = { x: 500, y: 500 };
+    const [gameOver,setGameOver] = useState()
 
     const [allPlanets, setAllPlanets] = useState([
         { name: 'Venus', coordinate: { x: 0, y: 0 }, question: 'question venus' },
@@ -41,12 +43,15 @@ const Canvas = () => {
         setQuestionToDisplay('');
     };
     const openPlanet = () => {
-        return allPlanets.map((planet) => {
+        allPlanets.map((planet) => {
             if (x === planet.coordinate.x) {
                 setQuestionToDisplay(planet.question);
             }
         });
     };
+    const handleGameOverClick = () =>{
+        gameOver ?setGameOver(false): setGameOver(true)
+    }
     const playerStyle = {
         left: x,
         top: y,
@@ -66,7 +71,7 @@ const Canvas = () => {
     };
 
     return (
-        <div tabIndex='0' onKeyDown={onKeyDown} className='game-container'>
+        <><div tabIndex='0' onKeyDown={onKeyDown} className='game-container'>
             <div className='player' style={playerStyle} />
             <div className='planet' style={planet1Style}>
                 Venus
@@ -82,7 +87,11 @@ const Canvas = () => {
                 {questionToDisplay}
                 <button onClick={handleQuestion}></button>
             </div>:null}
+            <div className="game-over-button" onClick={handleGameOverClick} >Finish Game</div>
         </div>
+        {gameOver?<EndGameScreen handleGameOverClick={handleGameOverClick}/>:null}
+        </>
+
     );
 };
 
