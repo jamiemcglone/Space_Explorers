@@ -20,7 +20,7 @@ db.players.insertMany([
 db.planets.insertMany([
     {
         name: "Sun",
-        image: "/space_explorers/client/images/sun.png",
+        image: "./images/sun.png",
         questions:[
             {
                 question: 'blabla',
@@ -56,7 +56,7 @@ db.planets.insertMany([
     ,
     {
         name: "Venus",
-        image: "/space_explorers/client/images/venus.png",
+        image: "./images/venus.png",
         questions:[
             {
                 question: 'blabla',
@@ -74,7 +74,7 @@ db.planets.insertMany([
 ,
     {
         name: "Earth",
-        image: "/space_explorers/client/images/earth.png",
+        image: "./images/earth.png",
         questions:[
             {
                 question: 'blabla',
@@ -92,7 +92,7 @@ db.planets.insertMany([
     ,
     {
         name: "Mars",
-        image: "/space_explorers/client/images/mars.png",
+        image: "./images/mars.png",
         questions:[
             {
                 question: 'blabla',
@@ -110,7 +110,7 @@ db.planets.insertMany([
     ,
     {
         name: "Jupiter",
-        image: "/space_explorers/client/images/jupiter.png",
+        image: "./images/jupiter.png",
         questions:[
             {
                 question: 'blabla',
@@ -128,7 +128,7 @@ db.planets.insertMany([
     ,
     {
         name: "Saturn",
-        image: "/space_explorers/client/images/saturn.png",
+        image: "./images/saturn.png",
         questions:[
             {
                 question: 'blabla',
@@ -146,7 +146,7 @@ db.planets.insertMany([
     ,
     {
         name: "Uranus",
-        image: "/space_explorers/client/images/uranus.png",
+        image: "./images/uranus.png",
         questions:[
             {
                 question: 'blabla',
@@ -164,7 +164,7 @@ db.planets.insertMany([
     ,
     {
         name: "Neptune",
-        image: "/space_explorers/client/images/neptune.png",
+        image: "./images/neptune.png",
         questions:[
             {
                 question: 'blabla',
@@ -182,7 +182,7 @@ db.planets.insertMany([
     ,
     {
         name: "Pluto",
-        image: "/space_explorers/client/images/pluto.png",
+        image: "./images/pluto.png",
         questions:[
             {
                 question: 'blabla',
