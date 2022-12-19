@@ -21,7 +21,7 @@ db.planets.insertMany([
     {
         name: "Sun",
         image: "./images/sun.png",
-        coordinates: " xxx",
+        coordinates:{ x:950, y:0},
         questions:[
             {
                 question: "How old is the Sun?",
@@ -42,7 +42,7 @@ db.planets.insertMany([
     {
         name: "Mercury",
         image: "./images/mercury.png",
-        coordinates: " xxx",
+        coordinates:{ x:850, y:50},
         questions:[
             {
                 question: "How long does a day on Mercury last compering to Earth days?",
@@ -63,7 +63,7 @@ db.planets.insertMany([
     {
         name: "Venus",
         image: "./images/venus.png",
-        coordinates: " xxx",
+        coordinates:{ x:750, y:100},
         questions:[
             {
                 question: "What's the hottest planet in our solar system?",
@@ -84,7 +84,7 @@ db.planets.insertMany([
     {
         name: "Earth",
         image: "./images/earth.png",
-        coordinates: " xxx",
+        coordinates:{ x:650, y:150},
         questions:[
             {
                 question: "Which planet in our solar system is NOT named after a Roman god or goddess?",
@@ -105,7 +105,7 @@ db.planets.insertMany([
     {
         name: "Mars",
         image: "./images/mars.png",
-        coordinates: " xxx",
+        coordinates:{ x:550, y:200},
         questions:[
             {
                 question: "How long does a day on Mars last?",
@@ -126,7 +126,7 @@ db.planets.insertMany([
     {
         name: "Jupiter",
         image: "./images/jupiter.png",
-        coordinates: " xxx",
+        coordinates:{ x:450, y:250},
         questions:[
             {
                 question: "Which planet in our solar system has the greatest number of moons?",
@@ -147,7 +147,7 @@ db.planets.insertMany([
     {
         name: "Saturn",
         image: "./images/saturn.png",
-        coordinates: " xxx",
+        coordinates:{ x:350, y:300},
         questions:[
             {
                 question: "How many moons does Saturn have?",
@@ -168,7 +168,7 @@ db.planets.insertMany([
     {
         name: "Uranus",
         image: "./images/uranus.png",
-        coordinates: " xxx",
+        coordinates:{ x:250, y:350},
         questions:[
             {
                 question: "What's the coldest planet in our solar system?",
@@ -189,7 +189,7 @@ db.planets.insertMany([
     {
         name: "Neptune",
         image: "./images/neptune.png",
-        coordinates: " xxx",
+        coordinates:{ x:150, y:400},
         questions:[
             {
                 question: "How lond does a year on Neptune last comparing to a year on Earth?",
@@ -210,7 +210,7 @@ db.planets.insertMany([
     {
         name: "Pluto",
         image: "./images/pluto.png",
-        coordinates: " xxx",
+        coordinates:{ x:50, y:450},
         questions:[
             {
                 question: "Is Pluto a planet?",
