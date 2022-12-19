@@ -34,9 +34,8 @@ const createRouter = function (collection) {
         console.log('newPlayer:', req);
         collection
             .insertOne(newPlayer)
-            .then((result) => {
-                res.json(result.ops[0]);////// NEEEDS TO UPDATE TO CURRENT MONGO
-            })
+            .then((doc) => collection.findOne({ _id: doc.insertedId }))
+            .then((doc) => res.json(doc))
             .catch((err) => {
                 console.error(err);
                 res.status(500);
