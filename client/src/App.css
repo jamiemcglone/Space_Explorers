@@ -1,10 +1,24 @@
-.App {
-  height: 100%;
-  overflow: hidden;
-  background: radial-gradient(ellipse at bottom, #1b2735 0%,#090a0f 100%);
+
+
+
+body{
+
+  margin:0;
+  padding:0;
+  min-height:100%
+  /* overflow:hidden */
 }
 
-h1 {
+.App {
+  height: 100vh;
+  background: radial-gradient(ellipse at bottom, #1b2735 0%,#090a0f 100%);
+  
+  
+}
+a{
+  text-decoration: none;
+}
+.logo {
   color: transparent;
   -webkit-text-stroke: 1px #fff;
   font-weight: 800;
@@ -34,6 +48,7 @@ h1 {
 }
 
 #stars {
+  
   width: 1px;
   height: 1px;
   background: transparent;
@@ -218,6 +233,7 @@ h1 {
 }
 
 #stars:after {
+  
   content: '';
   position: absolute;
   top: 2000px;

@@ -25,7 +25,6 @@ const HomepageContainer = ({planets}) => {
 
     return (
         <main>
-            <h1>Planets</h1>
             <Navigation planets = {planets}/>
             <Leaderboard players={allPlayers} />
             <PlayGameButton />
