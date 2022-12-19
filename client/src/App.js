@@ -1,7 +1,7 @@
 import './App.css';
-import Homepage from './containers/Homepage';
+import HomepageContainer from './containers/HomepageContainer';
 import Header from './components/Header';
-import Game from './containers/Game';
+import GameContainer from './containers/GameContainer';
 import PlanetInfo from './components/education/PlanetInfo';
 import PlanetService from './service/PlanetService';
 import {  Routes, Route } from 'react-router-dom';
@@ -31,8 +31,8 @@ function App() {
     </section>
 
             <Routes>
-                <Route path='/' element={<Homepage planets={allPlanets} />} />
-                <Route path='/game' element={<Game />} />
+                <Route path='/' element={<HomepageContainer planets={allPlanets} />} />
+                <Route path='/game' element={<GameContainer />} />
                 <Route path='/sun' element={<PlanetInfo planet={allPlanets[0]} />} />
                 <Route path='/mercury' element={<PlanetInfo planet={allPlanets[1]} />} />
                 <Route path='/venus' element={<PlanetInfo planet={allPlanets[2]}/>} />
@@ -42,7 +42,11 @@ function App() {
                 <Route path='/saturn' element={<PlanetInfo planet={allPlanets[6]}/>} />
                 <Route path='/uranus' element={<PlanetInfo planet={allPlanets[7]}/>} />
                 <Route path='/neptune' element={<PlanetInfo planet={allPlanets[8]}/>} />
+<<<<<<< HEAD
                 <Route path='/pluto' element={<PlanetInfo planet={allPlanets[9]}/>} />
+=======
+                <Route path='/pluto' element={<PlanetInfo planet={allPlanets[9]} />} />
+>>>>>>> 54da3cb1fa7ca29895d72c1fca11a5e88e36bdd5
             </Routes>
             </body>
         </main>
