@@ -19,8 +19,8 @@ a {
   top:0;
   left:0;
   overflow:hidden;
-  height:100vh;
-  width:100vw;
+  height:100%;
+  width:100%;
   z-index:1;
 }
 .logo {
@@ -33,6 +33,7 @@ a {
     -webkit-background-clip: text;
     background-position: 0 0;
     animation: back 20s linear infinite;
+    font-style: italic;
 }
 @keyframes back {
     100% {

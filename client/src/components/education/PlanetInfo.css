@@ -45,3 +45,7 @@
 #accordion label + input[type="radio"]:checked + .content{
     max-height: 400px;
 }
+
+img:hover{
+    shadow:(16px 16px #c20000);       
+}
