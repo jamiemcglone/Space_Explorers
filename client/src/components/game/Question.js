@@ -2,27 +2,29 @@ import React from 'react';
 import FeedbackQuestion from './FeedbackQuestion';
 import { Link } from 'react-router-dom';
 
-const Question = ({ question }) => {
+const Question = ({ questionToDisplay }) => {
+    console.log(questionToDisplay);
 
-    const handleAnswer = (userAnswer, question) => {
-        if (userAnswer == {correctAnswer})
-                console.log('Well done, your answer is correct');
-            else; 
-                console.log("The correct answer was `${correctAnswer}")
-      }
+    // const handleAnswer = (userAnswer, questionToDisplay) => {
+    //     if (userAnswer === {correctAnswer})
+    //             console.log('Well done, your answer is correct');
+    //         else; 
+    //             console.log("The correct answer was `${correctAnswer}")
+    //   }
 
     return (
         <div className="question">
 
-            <Link to={'/${questions}'}>{question}
-                <ul>
-                    <li>{question.option.a}</li>
-                    <li>{question.option.b}</li>
-                    <li>{question.option.c}</li>
+            <div>{questionToDisplay.question}
+                <ul>    
+                {/* option instead of list */}
+                    <li>{questionToDisplay.options.a}</li>
+                    <li>{questionToDisplay.options.b}</li>
+                    <li>{questionToDisplay.options.c}</li>
                 </ul>
-            </Link>
+            </div>
             <button type="button" className="answer-btn"
-            onClick={handleAnswer}
+            // onClick={handleAnswer}
             >Check your answer</button>
 
             <FeedbackQuestion />
