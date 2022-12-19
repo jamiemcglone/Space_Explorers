@@ -1,10 +1,30 @@
+// import { useEffect, useState, useCallback } from "react";
 import React from 'react';
 import Styled from 'styled-components';
 import'./PlanetInfo.css';
 
 const PlanetInfo = (planet) => {
+// Trying to solve state persistance, may be a long winded solution
+// This would take in the entire planets instead of planet
+
     /// generate info about the planet
-    console.log(planet.planet.image);
+    // console.log(planet.planet.image);
+    // console.log(planetToDisplay)
+
+    // const url = window.location.href
+    // const splitURL = url.split('/')
+    // const planetFromURL = splitURL.slice(-1)[0]
+    // console.log(planetFromURL)
+
+
+    // const [planetToDisplay, setPlanetToDisplay] = useState({})
+    // for (planet of planets) {
+        // if planet.planet.name === planetFromURL (
+            // setPlanetToDisplay(planet.planet)
+        // )
+    // }
+
+    // Set the return function to be planetToDisplay
 
     const Div0 = Styled.div`
     display: flex;
@@ -26,6 +46,7 @@ const PlanetInfo = (planet) => {
     display: flex;
     flex-direction: column;
     `
+
 
     return (
         <>
@@ -76,6 +97,7 @@ const PlanetInfo = (planet) => {
             </>
         
     );
-};
+
+}
 
 export default PlanetInfo;
