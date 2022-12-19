@@ -3,6 +3,7 @@ import Navigation from '../components/Navigation';
 import PlayGameButton from '../components/PlayGameButton';
 import Leaderboard from '../components/Leaderboard';
 import PlayerService from '../service/PlayerService';
+import Styled from 'styled-components';
 import { useState, useEffect } from 'react'
 
 

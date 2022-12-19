@@ -16,8 +16,19 @@ function App() {
     
     console.log(allPlanets)        
     return (
-        <div className='App'>
+        <main className='App'>
             <Header />
+        <body>
+            <section className="wrapper">
+        <div id="stars"></div>
+        <div id="stars2"></div>
+        <div id="stars3"></div>
+        <div id="title">
+            <span>JJOGSA</span>
+            <br></br>
+            <span>An exploration education!</span>
+        </div>
+    </section>
 
             <Routes>
                 <Route path='/' element={<HomepageContainer planets={allPlanets} />} />
@@ -31,9 +42,14 @@ function App() {
                 <Route path='/saturn' element={<PlanetInfo planet={allPlanets[6]}/>} />
                 <Route path='/uranus' element={<PlanetInfo planet={allPlanets[7]}/>} />
                 <Route path='/neptune' element={<PlanetInfo planet={allPlanets[8]}/>} />
+<<<<<<< HEAD
+                <Route path='/pluto' element={<PlanetInfo planet={allPlanets[9]}/>} />
+=======
                 <Route path='/pluto' element={<PlanetInfo planet={allPlanets[9]} />} />
+>>>>>>> 54da3cb1fa7ca29895d72c1fca11a5e88e36bdd5
             </Routes>
-        </div>
+            </body>
+        </main>
     );
 }
 
