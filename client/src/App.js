@@ -20,7 +20,7 @@ function App() {
                 <Header />
                 <Routes>
                     <Route path='/' element={<HomepageContainer planets={allPlanets} />} />
-                    <Route path='/game' element={<GameContainer />} />
+                    <Route path='/game' element={<GameContainer planets={allPlanets} />} />
                     <Route path='/sun' element={<PlanetInfo planet={allPlanets[0]} />} />
                     <Route path='/mercury' element={<PlanetInfo planet={allPlanets[1]} />} />
                     <Route path='/venus' element={<PlanetInfo planet={allPlanets[2]} />} />

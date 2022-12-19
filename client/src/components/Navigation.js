@@ -1,14 +1,14 @@
 import React from 'react';
 import PlanetList from './education/PlanetList';
-import Styled from 'styled-components';
+import styled from 'styled-components';
 
-const Div = Styled.div`
+const Div = styled.div`
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     
 `
-const Li = Styled.li`
+const Li = styled.li`
     text-decoration: none;
     list-style-type: none;
 `
