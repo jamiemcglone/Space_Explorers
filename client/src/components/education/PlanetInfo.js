@@ -67,7 +67,7 @@ const PlanetInfo = ({planet}) => {
                 <img src={planet.image} alt="planet" /> 
                 <div>
                 <h4>{planet.name}</h4>
-                <p>{planet.general_info}</p> 
+                <p>{planet.planet_bio}</p> 
                 </div>
             </Div1>
             <Div2>
