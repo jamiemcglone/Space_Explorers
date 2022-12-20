@@ -22,17 +22,18 @@ function App() {
                 <Routes>
                     <Route path='/' element={<HomepageContainer planets={allPlanets} />} />
                     <Route path='/game' element={<GameContainer planets={allPlanets} />} />
-                    <Route path='/sun' element={<PlanetInfo planet={allPlanets[0]} />} />
-                    <Route path='/mercury' element={<PlanetInfo planet={allPlanets[1]} />} />
-                    <Route path='/venus' element={<PlanetInfo planet={allPlanets[2]} />} />
-                    <Route path='/earth' element={<PlanetInfo planet={allPlanets[3]} />} />
-                    <Route path='/mars' element={<PlanetInfo planet={allPlanets[4]} />} />
-                    <Route path='/jupiter' element={<PlanetInfo planet={allPlanets[5]} />} />
-                    <Route path='/saturn' element={<PlanetInfo planet={allPlanets[6]} />} />
-                    <Route path='/uranus' element={<PlanetInfo planet={allPlanets[7]} />} />
-                    <Route path='/neptune' element={<PlanetInfo planet={allPlanets[8]} />} />
-                    <Route path='/pluto' element={<PlanetInfo planet={allPlanets[9]} />} />
+                    <Route path='/sun' element={allPlanets[0] ? <PlanetInfo planet={allPlanets[0]} /> : null} />
+                    <Route path='/mercury' element={allPlanets[1] ?<PlanetInfo planet={allPlanets[1]}/> : null} />
+                    <Route path='/venus' element={allPlanets[2] ? <PlanetInfo planet={allPlanets[2]} /> : null} />
+                    <Route path='/earth' element={allPlanets[3] ? <PlanetInfo planet={allPlanets[3]} /> : null} />
+                    <Route path='/mars' element={allPlanets[4] ? <PlanetInfo planet={allPlanets[4]} /> : null} />
+                    <Route path='/jupiter' element={allPlanets[5] ? <PlanetInfo planet={allPlanets[5]} /> : null} />
+                    <Route path='/saturn' element={allPlanets[6] ? <PlanetInfo planet={allPlanets[6]} /> : null} />
+                    <Route path='/uranus' element={allPlanets[7] ? <PlanetInfo planet={allPlanets[7]} /> : null} />
+                    <Route path='/neptune' element={allPlanets[8] ? <PlanetInfo planet={allPlanets[8]} /> : null} />
+                    <Route path='/pluto' element={allPlanets[9] ? <PlanetInfo planet={allPlanets[9]} /> : null} />
                 </Routes>
+
             </div>
             <div className='wrapper-animation'>
                 <div id='stars'></div>
