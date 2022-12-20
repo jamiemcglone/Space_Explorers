@@ -4,10 +4,12 @@ import EndGameScreen from './EndGameScreen';
 import { useState } from 'react';
 import styled from 'styled-components';
 import './Canvas.css';
+import Question from './Question';
+
 
 const Canvas = ({ planets }) => {
-    const [x, setX] = useState(0);
-    const [y, setY] = useState(0);
+    const [x, setX] = useState(250);
+    const [y, setY] = useState(250);
     const [questionToDisplay, setQuestionToDisplay] = useState('');
     const [gameOver, setGameOver] = useState();
 
@@ -59,7 +61,7 @@ const Canvas = ({ planets }) => {
     const openPlanet = () => {
         planets.map((planet) => {
             if (x === planet.coordinates.x && y=== planet.coordinates.y) {
-            setQuestionToDisplay(planet.name);
+            setQuestionToDisplay(planet.questions[0]);
             }
         });
     };
@@ -90,10 +92,8 @@ const Canvas = ({ planets }) => {
                 <div className='player' style={playerStyle} />
                 <div>{planetNodes}</div>
                 {questionToDisplay ? (
-                    <div className='question'>
-                        {questionToDisplay}
-                        <button onClick={handleQuestion}></button>
-                    </div>
+                    <Question questionToDisplay= {questionToDisplay}/>
+        
                 ) : null}
                 <div className='game-over-button' onClick={handleGameOverClick}>
                     Finish Game
