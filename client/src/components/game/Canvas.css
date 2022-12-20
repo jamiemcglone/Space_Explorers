@@ -5,7 +5,9 @@
     margin:auto;
     position:relative
 }
-
+.end-game-screen{
+    background: white;
+}
 .player{
     background-color:white;
     width:50px;
