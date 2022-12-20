@@ -1,0 +1,45 @@
+.imageContainer {
+    position: relative;
+    text-align: center;
+    padding: 1rem;
+  }
+
+  .imageContainer img:hover {
+    transform: scale(1.1);
+    filter: drop-shadow(3px 5px 6px rgb(53, 53, 240));
+    /* background-repeat: repeat; */
+    
+  }
+
+
+/* .centerWords{
+    position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+    color: transparent;
+  }
+
+  .centerWords:hover {
+    font-size: 2rem;
+    font-style: bold;
+    animation: flow 3s ease-in-out infinite;
+    background: linear-gradient(-60deg, yellow, red, white, yellow);
+    background-size: 300%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  } */
+
+  
+  @keyframes flow {
+    0% {
+      background-position: 0 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0 50%;
+    }
+  }

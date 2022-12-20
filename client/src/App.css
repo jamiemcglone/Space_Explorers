@@ -33,6 +33,7 @@ a {
     -webkit-background-clip: text;
     background-position: 0 0;
     animation: back 20s linear infinite;
+    font-style: italic;
 }
 @keyframes back {
     100% {

@@ -1,33 +1,42 @@
 import { useEffect, useState, useCallback, useRef } from "react";
 // import {useHistory} from "react-router-dom";
 import React from 'react';
-import Styled from 'styled-components';
+import styled from 'styled-components';
 import'./PlanetInfo.css';
 
 const PlanetInfo = ({planet}) => {
-
     if (!planet) return null;
 
-    const Div0 = Styled.div`
+    const Div0 = styled.div`
     display: flex;
     `
     
-    const Div1 = Styled.div`
+    const Div1 = styled.div`
     background: grey;
     display: flex;
     width: 30rem;
     margin: 2rem;
+    border-radius: 4px;
     `
-    const Div2 = Styled.div`
+    const Div2 = styled.div`
     background: grey;
     display: flex;
     width: 30rem;
     margin: 2rem;
+    border-radius: 4px;
     `
-    const Div3 = Styled.div`
+    const Div3 = styled.div`
     display: flex;
     flex-direction: column;
     `
+    const IMG = styled.img`
+        height:10rem;
+        width:auto;
+        
+    `
+
+    
+
 
 
     return (
@@ -42,7 +51,6 @@ const PlanetInfo = ({planet}) => {
                 </div>
             </Div1>
             <Div2>
-                <img src={planet.image} alt="planet" />  
             </Div2>
          </Div0>
          <Div3>
