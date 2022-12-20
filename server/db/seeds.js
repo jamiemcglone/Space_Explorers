@@ -21,6 +21,14 @@ db.planets.insertMany([
     {
         name: "Sun",
         image: "./images/sun.png",
+        alt_images : [
+            "./images/sun_images/sun-image-1.png",
+            "./images/sun_images/sun-image-2.png",
+            "./images/sun_images/sun-image-3.png",
+            "./images/sun_images/sun-image-4.png",
+            "./images/sun_images/sun-image-5.png" 
+            
+    ],
         coordinates:{ x:950, y:0},
         questions:[
             {
@@ -48,6 +56,14 @@ db.planets.insertMany([
     {
         name: "Mercury",
         image: "./images/mercury.png",
+        alt_images : [
+            "./images/mercury_images/mercury-image-1.png",
+            "./images/mercury_images/mercury-image-2.png",
+            "./images/mercury_images/mercury-image-3.png",
+            "./images/mercury_images/mercury-image-4.png",
+            "./images/mercury_images/mercury-image-5.png" 
+            
+    ],
         coordinates:{ x:850, y:50},
         questions:[
             {
@@ -75,6 +91,15 @@ db.planets.insertMany([
     {
         name: "Venus",
         image: "./images/venus.png",
+        alt_images : [
+            "./images/venus_images/venus-image-1.png",
+            "./images/venus_images/venus-image-2.png",
+            "./images/venus_images/venus-image-3.png",
+            "./images/venus_images/venus-image-4.png",
+            "./images/venus_images/venus-image-5.png" 
+            
+    ],
+        
         coordinates:{ x:750, y:100},
         questions:[
             {
@@ -102,6 +127,14 @@ db.planets.insertMany([
     {
         name: "Earth",
         image: "./images/earth.png",
+        alt_images : [
+            "./images/earth_images/earth-image-1.png",
+            "./images/earth_images/earth-image-2.png",
+            "./images/earth_images/earth-image-3.png",
+            "./images/earth_images/earth-image-4.png",
+            "./images/earth_images/earth-image-5.png" 
+            
+    ],
         coordinates:{ x:650, y:150},
         questions:[
             {
@@ -129,6 +162,14 @@ db.planets.insertMany([
     {
         name: "Mars",
         image: "./images/mars.png",
+        alt_images : [
+            "./images/mars_images/mars-image-1.png",
+            "./images/mars_images/mars-image-2.png",
+            "./images/mars_images/mars-image-3.png",
+            "./images/mars_images/mars-image-4.png",
+            "./images/mars_images/mars-image-5.png" 
+            
+    ],
         coordinates:{ x:550, y:200},
         questions:[
             {
