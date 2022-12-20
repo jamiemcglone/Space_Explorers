@@ -86,6 +86,13 @@ const Canvas = ({ planets }) => {
     const checkAnswerCorrect = () =>{
         setAnswerCorrect(true)}
 
+    const restartGame =() => {
+        setX(250)
+        setY(250)
+        setScore(0)
+        setGameOver(false)
+    }
+
 
 return (
     <>
@@ -102,7 +109,7 @@ return (
             {/* <div>Score: { }</div> */}
         </div>
 
-        {gameOver ? <EndGameScreen handleGameOverClick={handleGameOverClick} /> : null}
+        {gameOver ? <EndGameScreen handleGameOverClick={handleGameOverClick} score={score} restartGame={restartGame}/> : null}
     </>
 );
 };
