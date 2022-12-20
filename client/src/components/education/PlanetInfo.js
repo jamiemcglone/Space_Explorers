@@ -7,8 +7,9 @@ import'./PlanetInfo.css';
 const PlanetInfo = ({planet}) => {
 
     const [randomIndex, setRandomIndex] = useState(0);
+
     useEffect(() => {
-        handleClick()
+        randomGenerator()
     }, [randomIndex])
 
     // if (!planet) return null
@@ -40,27 +41,23 @@ const PlanetInfo = ({planet}) => {
         width:auto;
         
     `
-    const array = [1, 2, 3, 4, 5];
 
+    const RandomImage = styled.img`
+        height: 10rem;
+        width: auto;
+    `
 
-    // let randomNumber;
-    // useEffect(() => {
-
-    // }, [randomNumber])
-    const handleClick = () => {
+    const randomGenerator = () => {
         
         const getRandomNumber = () => {
-            const random = Math.floor(Math.random() * array.length);
+            const random = Math.floor(Math.random() * planet.alt_images.length);
+            console.log(random)
             return random;
         }
         
-        setRandomIndex(array[getRandomNumber()]);
+        setRandomIndex(getRandomNumber());
 
     }
-
-    console.log(randomIndex);
-
-
 
     return (
         <>
@@ -74,9 +71,9 @@ const PlanetInfo = ({planet}) => {
                 </div>
             </Div1>
             <Div2>
-            <button onClick={handleClick}>Click me for a random image!</button>
-            <p>{array[randomIndex - 1]}</p>
-            {/* <img src={randomImageResult} alt="Random-Image" /> */}
+            <button onClick={randomGenerator}>Click me for a random image!</button>
+            {/* <img>{planet.alt_images[randomIndex - 1]}</p> */}
+            <RandomImage src={planet.alt_images[randomIndex - 1]} alt="Random-Image" />
             </Div2>
             </Div0>
             <Div3>
