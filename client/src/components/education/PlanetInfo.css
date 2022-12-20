@@ -45,3 +45,8 @@
 #accordion label + input[type="radio"]:checked + .content{
     max-height: 400px;
 }
+
+.planetInfo1 img {
+    height: 10rem;
+    width: auto
+}
