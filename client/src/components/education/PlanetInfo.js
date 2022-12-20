@@ -51,7 +51,9 @@ const PlanetInfo = ({planet}) => {
                         <label htmlFor="first">Size, Mass, Gravity <span>&#8595;</span></label>
                         <input type="radio" name="accordion" id="first" htmlChecked/>
                         <div className="content">
-                            <p>Its very big and heavy and draws things to it
+                            <p>Size: {planet.data.size}<br></br>
+                            Mass: {planet.data.mass}<br></br>
+                            Gravity: {planet.data.gravity}<br></br>
                             </p>
                         </div>
                     </li>
@@ -59,7 +61,7 @@ const PlanetInfo = ({planet}) => {
                         <label htmlFor="second">Composition <span>&#8595;</span></label>
                         <input type="radio" name="accordion" id="second"/>
                         <div className="content">
-                            <p>It is made of rock
+                            <p>{planet.data.composition}
                             </p>
                         </div>
                     </li>
@@ -67,7 +69,7 @@ const PlanetInfo = ({planet}) => {
                         <label htmlFor="third">Would you like to know more? <span>&#8595;</span></label>
                         <input type="radio" name="accordion" id="third"/>
                         <div className="content">
-                            <p>I could know more but I do not know if I can...
+                            <p>{planet.data.extra}
                             </p>
                         </div>
                     </li>
