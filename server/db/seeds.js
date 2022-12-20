@@ -20,6 +20,7 @@ db.players.insertMany([
 db.planets.insertMany([
     {
         name: "Sun",
+        planet_bio: "The Sun is the centre of our Solar System. It is a nearly perfect ball of hot plasma (like most of us), heated to incandescence by nuclear fusion reactions in its core. The Sun radiates this energy mainly as light, ultraviolet, and infrared radiation, and is the most important source of energy for life on Earth.",
         image: "./images/sun.png",
         coordinates:{ x:950, y:0},
         questions:[
@@ -47,6 +48,7 @@ db.planets.insertMany([
     },
     {
         name: "Mercury",
+        planet_bio: "Mercury is the smallest planet in the Solar System and the closest to the Sun. Its orbit around the Sun takes 87.97 Earth days, the shortest of all the Sun's planets. It is named after the Roman god Mercurius (Mercury), god of commerce, messenger of the gods, and mediator between gods and mortals, corresponding to the Greek god Hermes (Ἑρμῆς). Like Venus, Mercury orbits the Sun within Earth's orbit as an inferior planet.",
         image: "./images/mercury.png",
         coordinates:{ x:850, y:50},
         questions:[
@@ -74,6 +76,7 @@ db.planets.insertMany([
     ,
     {
         name: "Venus",
+        planet_bio: "Venus is the second planet from the Sun. It is sometimes called Earth's 'sister' or 'twin' planet as it is almost as large and has a similar composition. As an interior planet to Earth, Venus (like Mercury) appears in Earth's sky never far from the Sun, either as morning star or evening star. Aside from the Sun and Moon, Venus is the brightest natural object in Earth's sky, capable of casting visible shadows on Earth at dark conditions and being visible to the naked eye in broad daylight",
         image: "./images/venus.png",
         coordinates:{ x:750, y:100},
         questions:[
@@ -101,6 +104,7 @@ db.planets.insertMany([
     ,
     {
         name: "Earth",
+        planet_bio: "Earth is the third planet from the Sun and the only astronomical object known to harbor life. While large volumes of water can be found throughout the Solar System, only Earth sustains liquid surface water. About 71% of Earth's surface is made up of the ocean, dwarfing Earth's polar ice, lakes, and rivers. The remaining 29% of Earth's surface is land, consisting of continents and islands. Earth's surface layer is formed of several slowly moving tectonic plates, which interact to produce mountain ranges, volcanoes, and earthquakes. Earth's liquid outer core generates the magnetic field that shapes the magnetosphere of the Earth, deflecting destructive solar winds.",
         image: "./images/earth.png",
         coordinates:{ x:650, y:150},
         questions:[
@@ -128,6 +132,7 @@ db.planets.insertMany([
     ,
     {
         name: "Mars",
+        planet_bio: "Mars is the fourth planet from the Sun and the second-smallest planet in the Solar System, only being larger than Mercury. In the English language, Mars is named for the Roman god of war. Mars is a terrestrial planet with a thin atmosphere (less than 1% that of Earth's), and has a crust primarily composed of elements similar to Earth's crust, as well as a core made of iron and nickel. Mars has surface features such as impact craters, valleys, dunes and polar ice caps. It has two small and irregularly shaped moons, Phobos and Deimos.",
         image: "./images/mars.png",
         coordinates:{ x:550, y:200},
         questions:[
@@ -156,6 +161,7 @@ db.planets.insertMany([
     ,
     {
         name: "Jupiter",
+        planet_bio: "Jupiter is the fifth planet from the Sun and the largest in the Solar System. It is a gas giant with a mass more than two and a half times that of all the other planets in the Solar System combined, but slightly less than one-thousandth the mass of the Sun. Jupiter is the third brightest natural object in the Earth's night sky after the Moon and Venus, and it has been observed since prehistoric times. It was named after the Roman god Jupiter, the king of the gods.",
         image: "./images/jupiter.png",
         alt_images: [
             "./images/Jupiter/Jupiter1.png",
@@ -190,6 +196,7 @@ db.planets.insertMany([
     ,
     {
         name: "Saturn",
+        planet_bio: "Saturn is the sixth planet from the Sun and the second-largest in the Solar System, after Jupiter. It is a gas giant with an average radius of about nine and a half times that of Earth. It has only one-eighth the average density of Earth; however, with its larger volume, Saturn is over 95 times more massive.",
         image: "./images/saturn.png",
         alt_images: [
             "./images/Saturn/Saturn1.png",
@@ -224,6 +231,7 @@ db.planets.insertMany([
     ,
     {
         name: "Uranus",
+        planet_bio: "Uranus is the seventh planet from the Sun. Its name is a reference to the Greek god of the sky, Uranus (Caelus), who, according to Greek mythology, was the great-grandfather of Ares (Mars), grandfather of Zeus (Jupiter) and father of Cronus (Saturn). It has the third-largest planetary radius and fourth-largest planetary mass in the Solar System. Uranus is similar in composition to Neptune, and both have bulk chemical compositions which differ from that of the larger gas giants Jupiter and Saturn. For this reason, scientists often classify Uranus and Neptune as 'ice giants' to distinguish them from the other giant planets.",
         image: "./images/uranus.png",
         alt_images: [
             "./images/Uranus/Uranus1.jpeg",
@@ -258,6 +266,7 @@ db.planets.insertMany([
     ,
     {
         name: "Neptune",
+        planet_bio: "Neptune is the eighth planet from the Sun and the farthest known planet in the Solar System. It is the fourth-largest planet in the Solar System by diameter, the third-most-massive planet, and the densest giant planet. It is 17 times the mass of Earth, and slightly more massive than its near-twin Uranus. Neptune is denser and physically smaller than Uranus because its greater mass causes more gravitational compression of its atmosphere. It is referred to as one of the solar system's two ice giant planets (the other one being Uranus). Being composed primarily of gases and liquids, it has no well-defined 'solid surface'.",
         image: "./images/neptune.png",
         alt_images: [
             "./images/Neptune/Neptune1.jpeg",
@@ -293,6 +302,7 @@ db.planets.insertMany([
     ,
     {
         name: "Pluto",
+        planet_bio: "Pluto (minor-planet designation: 134340 Pluto) is a dwarf planet in the Kuiper belt, a ring of bodies beyond the orbit of Neptune. It is the ninth-largest and tenth-most-massive known object to directly orbit the Sun. It is the largest known trans-Neptunian object by volume, by a small margin, but is slightly less massive than Eris. Like other Kuiper belt objects, Pluto is made primarily of ice and rock and is much smaller than the inner planets. Compared to Earth's moon, Pluto has only one sixth its mass and one third its volume.",
         image: "./images/pluto.png",
         alt_images: [
             "./images/Pluto/Pluto1.png",
