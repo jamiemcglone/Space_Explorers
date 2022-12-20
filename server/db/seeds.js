@@ -122,7 +122,7 @@ db.planets.insertMany([
             mass: "5.972 × 10^24kg",
             gravity: "9.807 m/s²",
             composition: "Nitrogen and oxygen",
-            extra: "James Yates lives on this big bad rock"
+            extra: "James Yates lives on this big bad rock with his son, James Jnr."
     }// extend later on to an accordion with fun facts
     }
     ,
@@ -157,6 +157,13 @@ db.planets.insertMany([
     {
         name: "Jupiter",
         image: "./images/jupiter.png",
+        alt_images: [
+            "./images/Jupiter/Jupiter1.png",
+            "./images/Jupiter/Jupiter2.png",
+            "./images/Jupiter/Jupiter3.jpeg",
+            "./images/Jupiter/Jupiter4.png",
+            "./images/Jupiter/Jupiter5.jpeg",
+        ],
         coordinates:{ x:450, y:250},
         questions:[
             {
@@ -184,6 +191,13 @@ db.planets.insertMany([
     {
         name: "Saturn",
         image: "./images/saturn.png",
+        alt_images: [
+            "./images/Saturn/Saturn1.png",
+            "./images/Saturn/Saturn2.png",
+            "./images/Saturn/Saturn3.jpeg",
+            "./images/Saturn/Saturn4.jpeg",
+            "./images/Saturn/Saturn5.jpeg",
+        ],
         coordinates:{ x:350, y:300},
         questions:[
             {
@@ -211,6 +225,13 @@ db.planets.insertMany([
     {
         name: "Uranus",
         image: "./images/uranus.png",
+        alt_images: [
+            "./images/Uranus/Uranus1.jpeg",
+            "./images/Uranus/Uranus2.jpeg",
+            "./images/Uranus/Uranus3.jpeg",
+            "./images/Uranus/Uranus4.png",
+            "./images/Uranus/Uranus5.jpeg",
+        ],
         coordinates:{ x:250, y:350},
         questions:[
             {
@@ -238,6 +259,13 @@ db.planets.insertMany([
     {
         name: "Neptune",
         image: "./images/neptune.png",
+        alt_images: [
+            "./images/Neptune/Neptune1.jpeg",
+            "./images/Neptune/Neptune2.jpeg",
+            "./images/Neptune/Neptune3.jpeg",
+            "./images/Neptune/Neptune4.png",
+            "./images/Neptune/Neptune5.png",
+        ],
         coordinates:{ x:150, y:400},
         questions:[
             {
@@ -266,6 +294,13 @@ db.planets.insertMany([
     {
         name: "Pluto",
         image: "./images/pluto.png",
+        alt_images: [
+            "./images/Pluto/Pluto1.png",
+            "./images/Pluto/Pluto2.jpeg",
+            "./images/Pluto/Pluto3.png",
+            "./images/Pluto/Pluto4.jpeg",
+            "./images/Pluto/Pluto5.png",
+        ],
         coordinates:{ x:50, y:450},
         questions:[
             {
