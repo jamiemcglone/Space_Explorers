@@ -53,10 +53,10 @@ const PlanetInfo = ({planet}) => {
     const IMG = styled.img`
         height:10rem;
         width:auto;
-        &:hover {
-            text-shadow: 3px 3px #c20000;
-        }
+        
     `
+
+    
 
 
 
@@ -73,7 +73,9 @@ const PlanetInfo = ({planet}) => {
                 </div>
             </Div1>
             <Div2>
-                <IMG src={planet.image} alt="planet" />  
+                <IMG src={planet.image} alt="planet" /> 
+                <p></p>
+                <button>click me</button> 
             </Div2>
             </Div0>
             <Div3>
