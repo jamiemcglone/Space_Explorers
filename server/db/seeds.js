@@ -21,7 +21,7 @@ db.planets.insertMany([
     {
         name: "Sun",
         image: "./images/sun.png",
-        coordinates: " xxx",
+        coordinates:{ x:950, y:0},
         questions:[
             {
                 question: "How old is the Sun?",
@@ -36,13 +36,19 @@ db.planets.insertMany([
                 extension: "However, its size is average compared to other stars."
             }
         ],
-        general_info:"balblablalbal"// extend later on to an accordion with fun facts
+        data: {
+                size: "696,340km",
+                mass: "1.989 × 10^30kg",
+                gravity: "274 m/s²",
+                composition: "Hydrogen and Helium",
+                extra: "If you were to go and attack the sun, you would be best to do it at night when it is switched off"
+        }// extend later on to an accordion with fun facts
     
     },
     {
         name: "Mercury",
         image: "./images/mercury.png",
-        coordinates: " xxx",
+        coordinates:{ x:850, y:50},
         questions:[
             {
                 question: "How long does a day on Mercury last compering to Earth days?",
@@ -57,13 +63,19 @@ db.planets.insertMany([
                 extension: "Mercury, Venus, Earth and Mars are terrestrial planets (also known as rocky planets). They are mostly made up of silicate rocks and metals. Jupiter and Saturn are known as gas giants, while Uranus and Neptune are ice giants."
             }
         ],
-        general_info:"balblablalbal"// extend later on to an accordion with fun facts
+        data: {
+            size: "2,439.7km",
+            mass: "3.285 × 10^23kg",
+            gravity: "3.7 m/s²",
+            composition: "Oxygen, sodium, hydrogen, helium, and potassium",
+            extra: "One year on Mercury is just 88 Earth days!"
+    }// extend later on to an accordion with fun fact// extend later on to an accordion with fun facts
     }
     ,
     {
         name: "Venus",
         image: "./images/venus.png",
-        coordinates: " xxx",
+        coordinates:{ x:750, y:100},
         questions:[
             {
                 question: "What's the hottest planet in our solar system?",
@@ -78,13 +90,19 @@ db.planets.insertMany([
                 extension: "All other planets spin anti-clockwise on their axis and orbit the Sun in an anti-clockwise direction. Venus also orbits the Sun anti-clockwise, but its unusual axis rotation is due to being upside down."
             }
         ],
-        general_info:"balblablalbal"// extend later on to an accordion with fun facts
+        data: {
+            size: "6,051.8km",
+            mass: "4.867 × 10^24kg",
+            gravity: "8.87 m/s²",
+            composition: "Carbon dioxide and nitrogen",
+            extra: "Venus is hotter than Mercury, despite being further from the Sun"
+    }// extend later on to an accordion with fun facts
     }
     ,
     {
         name: "Earth",
         image: "./images/earth.png",
-        coordinates: " xxx",
+        coordinates:{ x:650, y:150},
         questions:[
             {
                 question: "Which planet in our solar system is NOT named after a Roman god or goddess?",
@@ -99,13 +117,19 @@ db.planets.insertMany([
                 extension: "The Earth's oval shape is caused by the Earth’s spin and the effect of gravity."
             }
         ],
-        general_info:"balblablalbal"// extend later on to an accordion with fun facts
+        data: {
+            size: "6,371km",
+            mass: "5.972 × 10^24kg",
+            gravity: "9.807 m/s²",
+            composition: "Nitrogen and oxygen",
+            extra: "James Yates lives on this big bad rock"
+    }// extend later on to an accordion with fun facts
     }
     ,
     {
         name: "Mars",
         image: "./images/mars.png",
-        coordinates: " xxx",
+        coordinates:{ x:550, y:200},
         questions:[
             {
                 question: "How long does a day on Mars last?",
@@ -120,13 +144,20 @@ db.planets.insertMany([
                 extension: "Olympus Mons found on Mars is the largest volcano in the solar system reaching 24 km high. It's 3 times higher than Mount Everest."
             }
         ],
-        general_info:"balblablalbal"// extend later on to an accordion with fun facts
+        data: {
+            size: "6,779km",
+            mass: "6.39 × 10^23kg",
+            gravity: "3.721 m/s²",
+            composition: "Iron, nickel and sulfur",
+            extra: "Frozen water exists on Mars"
+    }
+        // extend later on to an accordion with fun facts
     }
     ,
     {
         name: "Jupiter",
         image: "./images/jupiter.png",
-        coordinates: " xxx",
+        coordinates:{ x:450, y:250},
         questions:[
             {
                 question: "Which planet in our solar system has the greatest number of moons?",
@@ -141,13 +172,19 @@ db.planets.insertMany([
                 extension: "c"
             }
         ],
-        general_info:"balblablalbal"// extend later on to an accordion with fun facts
+        data: {
+            size: "69,911km",
+            mass: "1.898 × 10^27kg",
+            gravity: "24.79 m/s²",
+            composition: "Hydrogen and helium",
+            extra: "The red spot is an anticyclonic storm that is about three times the size of Earth"
+    }// extend later on to an accordion with fun facts
     }
     ,
     {
         name: "Saturn",
         image: "./images/saturn.png",
-        coordinates: " xxx",
+        coordinates:{ x:350, y:300},
         questions:[
             {
                 question: "How many moons does Saturn have?",
@@ -162,13 +199,19 @@ db.planets.insertMany([
                 extension: "Its polar diameter is 90% of its equatorial diameter, this is due to its low density and fast rotation. Saturn turns on its axis once every 10 hours and 34 minutes giving it the second-shortest day of any of the solar system’s planets."
             }
         ],
-        general_info:"balblablalbal"// extend later on to an accordion with fun facts
+        data: {
+            size: "58,232km",
+            mass: "5.683 × 10^26kg",
+            gravity: "10.44 m/s²",
+            composition: "Hydrogen, helium, iron and nickel",
+            extra: "You cannot stand on Saturn as it is too gassy"
+    }// extend later on to an accordion with fun facts
     }
     ,
     {
         name: "Uranus",
         image: "./images/uranus.png",
-        coordinates: " xxx",
+        coordinates:{ x:250, y:350},
         questions:[
             {
                 question: "What's the coldest planet in our solar system?",
@@ -183,13 +226,19 @@ db.planets.insertMany([
                 extension: "During some parts of its orbit one or the other of its poles point directly at the Sun and get about 42 years of direct sunlight. The rest of the time they are in darkness."
             }
         ],
-        general_info:"balblablalbal"// extend later on to an accordion with fun facts
+        data: {
+            size: "25,362km",
+            mass: "8.681 × 10^25kg",
+            gravity: "8.87 m/s²",
+            composition: "Water, methane and ammonia",
+            extra: "Uranus was the first planet to be discovered with a telescope"
+    }// extend later on to an accordion with fun facts
     }
     ,
     {
         name: "Neptune",
         image: "./images/neptune.png",
-        coordinates: " xxx",
+        coordinates:{ x:150, y:400},
         questions:[
             {
                 question: "How lond does a year on Neptune last comparing to a year on Earth?",
@@ -204,13 +253,20 @@ db.planets.insertMany([
                 extension: "They are very faint and likely made up of ice particles mixed with dust grains and possibly coated with a carbon-based substance."
             }
         ],
-        general_info:"balblablalbal"// extend later on to an accordion with fun facts
+        data: {
+            size: "24,622km",
+            mass: "1.024 × 10^26kg",
+            gravity: "11.15 m/s²",
+            composition: "Water, methane and ammonia",
+            extra: "One year on Neptune is equivalent to 165 Earth years"
+    }
+        // extend later on to an accordion with fun facts
     }
     ,
     {
         name: "Pluto",
         image: "./images/pluto.png",
-        coordinates: " xxx",
+        coordinates:{ x:50, y:450},
         questions:[
             {
                 question: "Is Pluto a planet?",
@@ -225,7 +281,14 @@ db.planets.insertMany([
                 extension: "For the 76 years between Pluto being discovered (in 1930) and the time it was reclassified as a dwarf planet it completed under a third of its orbit around the Sun."
             }
         ],
-        general_info:"balblablalbal"// extend later on to an accordion with fun facts
+        data: {
+            size: "1,188.3km",
+            mass: "1.309 × 10^22kg",
+            gravity: "0.62 m/s²",
+            composition: "Nitrogen, oxygen, argon, methane",
+            extra: "Pluto is not a planet"
+    }
+      // extend later on to an accordion with fun facts
     }
     ,
 ]);

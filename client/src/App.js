@@ -9,18 +9,19 @@ import { useEffect, useState } from 'react';
 
 function App() {
     const [allPlanets, setAllPlanets] = useState([]);
+    
     useEffect(() => {
         PlanetService.getPlanets().then((planets) => setAllPlanets(planets));
     }, []);
-
-    console.log(allPlanets);
+    
+    console.log("allPlanets:", allPlanets); 
     return (
         <>
             <div className='App'>
                 <Header />
                 <Routes>
                     <Route path='/' element={<HomepageContainer planets={allPlanets} />} />
-                    <Route path='/game' element={<GameContainer />} />
+                    <Route path='/game' element={<GameContainer planets={allPlanets} />} />
                     <Route path='/sun' element={<PlanetInfo planet={allPlanets[0]} />} />
                     <Route path='/mercury' element={<PlanetInfo planet={allPlanets[1]} />} />
                     <Route path='/venus' element={<PlanetInfo planet={allPlanets[2]} />} />
@@ -30,7 +31,6 @@ function App() {
                     <Route path='/saturn' element={<PlanetInfo planet={allPlanets[6]} />} />
                     <Route path='/uranus' element={<PlanetInfo planet={allPlanets[7]} />} />
                     <Route path='/neptune' element={<PlanetInfo planet={allPlanets[8]} />} />
-                    <Route path='/pluto' element={<PlanetInfo planet={allPlanets[9]} />} />
                     <Route path='/pluto' element={<PlanetInfo planet={allPlanets[9]} />} />
                 </Routes>
             </div>

@@ -1,32 +1,11 @@
-// import { useEffect, useState, useCallback } from "react";
+import { useEffect, useState, useCallback, useRef } from "react";
+// import {useHistory} from "react-router-dom";
 import React from 'react';
 import styled from 'styled-components';
 import'./PlanetInfo.css';
 
 const PlanetInfo = ({planet}) => {
-
     if (!planet) return null;
-// Trying to solve state persistance, may be a long winded solution
-// This would take in the entire planets instead of planet
-
-    /// generate info about the planet
-    // console.log(planet.planet.image);
-    // console.log(planetToDisplay)
-
-    // const url = window.location.href
-    // const splitURL = url.split('/')
-    // const planetFromURL = splitURL.slice(-1)[0]
-    // console.log(planetFromURL)
-
-
-    // const [planetToDisplay, setPlanetToDisplay] = useState({})
-    // for (planet of planets) {
-        // if planet.planet.name === planetFromURL (
-            // setPlanetToDisplay(planet.planet)
-        // )
-    // }
-
-    // Set the return function to be planetToDisplay
 
     const Div0 = styled.div`
     display: flex;
@@ -64,21 +43,17 @@ const PlanetInfo = ({planet}) => {
         <>
         <Div0>
             <h3>{planet.name}</h3>
-            <p>{planet.index}</p>
             <Div1 className='planetInfo1'>
-                <IMG src={planet.image} alt="planet" /> 
+                <img src={planet.image} alt="planet" /> 
                 <div>
                 <h4>{planet.name}</h4>
                 <p>{planet.general_info}</p> 
                 </div>
             </Div1>
             <Div2>
-                <IMG src={planet.image} alt="planet" /> 
-                <p></p>
-                <button>click me</button> 
             </Div2>
-            </Div0>
-            <Div3>
+         </Div0>
+         <Div3>
                 <ul id="accordion">
                     <li>
                         <label htmlFor="first">Size, Mass, Gravity <span>&#8595;</span></label>
