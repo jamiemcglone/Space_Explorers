@@ -57,6 +57,7 @@ const PlanetInfo = ({planet}) => {
         
         setRandomIndex(getRandomNumber());
 
+
     }
 
     return (
