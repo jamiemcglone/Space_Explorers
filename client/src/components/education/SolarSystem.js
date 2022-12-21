@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-import NasaAPIkey from config.js
+import NasaAPIkey from 'config.js';
 
 const SolarSystem = () => {
 
@@ -15,9 +15,9 @@ const SolarSystem = () => {
     return (
         <>
         <Link to='/solarsystem'>Solar System</Link>;
-            <ContainerWrapper>
+            <div>
                 <h1>The Solar System</h1>
-                    <DoubleBoxWrapper>
+                    <div>
                         <div>
                             <img src="./client/src/image/solarsystem.gif" alt="pictureOfSolarSystem"/>
                             <p>The Solar System is the gravitationally bound system of the Sun and the objects that orbit it. It formed 4.6 billion years ago from the gravitational collapse of a giant interstellar molecular cloud. The vast majority (99.86%) of the system's mass is in the Sun, with most of the remaining mass contained in the planet Jupiter. The four inner system planets—Mercury, Venus, Earth and Mars—are terrestrial planets, being composed primarily of rock and metal. The four giant planets of the outer system are substantially larger and more massive than the terrestrials. The two largest, Jupiter and Saturn, are gas giants, being composed mainly of hydrogen and helium; the next two, Uranus and Neptune, are ice giants, being composed mostly of volatile substances with relatively high melting points compared with hydrogen and helium, such as water, ammonia, and methane. All eight planets have nearly circular orbits that lie near the plane of Earth's orbit, called the ecliptic.</p>
@@ -26,8 +26,8 @@ const SolarSystem = () => {
                         <img src=“imageToDisplay” alt=“astronomy-picture”/>
                         </div>
 
-                    </DoubleBoxWrapper>
-                    <AccordionWrapper>
+                    </div>
+                    <div>
                         <ul id='accordion'>
                             <li>
                                 <label htmlFor='first'>
@@ -72,8 +72,8 @@ const SolarSystem = () => {
                                 </div>
                             </li>
                         </ul>
-                    </AccordionWrapper>
-            </ContainerWrapper>
+                    </div>
+            </div>
         </>
     );
 };
