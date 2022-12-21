@@ -36,6 +36,13 @@ const Score = styled.div`
     width: 10rem;
     height: 2rem;
 `;
+
+const Player = styled.img`
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    z-index:10;
+`
 const Canvas = ({ planets }) => {
     const [x, setX] = useState(250);
     const [y, setY] = useState(250);
@@ -120,7 +127,7 @@ const Canvas = ({ planets }) => {
     return (
         <>
             <GameContainer tabIndex='0' onKeyDown={onKeyDown}>
-                <div className='player' style={playerStyle} />
+                <Player src="./images/ovni.png" alt='planet' style={playerStyle} />
                 <>{planetNodes}</>
                 {questionToDisplay ? (
                     <Question

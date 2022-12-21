@@ -11,18 +11,4 @@
     position: absolute;
 }
 
-.question {
-    background-color: white;
-    position: absolute;
-    top: 500px;
-    left: 450px;
-}
 
-.game-over-button {
-    width: 50px;
-    height: 50px;
-    background-color: white;
-    position: absolute;
-    right: 50px;
-    bottom: 50px;
-}
