@@ -5,6 +5,7 @@ import styled from 'styled-components';
 import './PlanetInfo.css';
 
 const PlanetInfo = ({ planet }) => {
+
     const [randomIndex, setRandomIndex] = useState(0);
 
 
@@ -47,9 +48,7 @@ const PlanetInfo = ({ planet }) => {
 
             const random = Math.floor(Math.random() * planet.alt_images.length);
             setRandomIndex(random);
-            console.log(random);
     }
-
 
     return (
         <>
@@ -65,7 +64,7 @@ const PlanetInfo = ({ planet }) => {
                 <Div2>
                     <button onClick={randomGenerator}>Click me for a random image!</button>
                     {/* <img>{planet.alt_images[randomIndex - 1]}</p> */}
-                    <RandomImage src={planet.alt_images[randomIndex - 1]} alt='Random-Image' />
+                    <RandomImage src={planet.alt_images[randomIndex]} alt='Random-Image' />
                 </Div2>
             </Div0>
             <Div3>
