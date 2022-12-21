@@ -1,26 +1,37 @@
 import React from 'react';
+import styled from 'styled-components';
 
-const FeedbackQuestion = ({ userAnswer, correctAnswer, extension, options, countScore,checkAnswerCorrect }) => {
-    let message = " ";
+const FeedbackBtn = styled.button`
+    background-color: white;
+    width: 10rem;
+    height: 2rem;
+    border-radius: 5px;
+    color: black;
+`;
 
+const FeedbackQuestion = ({
+    userAnswer,
+    correctAnswer,
+    extension,
+    options,
+    countScore,
+    checkAnswerCorrect,
+}) => {
+    let message = ' ';
 
     if (userAnswer === correctAnswer) {
         message = `Well done you, that's correct! ${extension}`;
-        checkAnswerCorrect()
-
-    }
-    else {
+        checkAnswerCorrect();
+    } else {
         message = `Sorry, the correct answer is ${options[correctAnswer]}. ${extension}`;
-    
     }
 
     return (
-        <div>
-            <h1>{message}</h1>
-
-            <button onClick = {countScore}>Continue the game</button>
-        </div>
-    )
+        <>
+            <h2>{message}</h2>
+            <FeedbackBtn onClick={countScore}>Continue the game</FeedbackBtn>
+        </>
+    );
 };
 
 export default FeedbackQuestion;
