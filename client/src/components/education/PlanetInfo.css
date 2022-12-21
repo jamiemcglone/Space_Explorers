@@ -1,6 +1,5 @@
 #accordion {
-    margin: 20px;
-    width: 800px;
+    padding-inline-start:0;
 }
 
 #accordion li {
@@ -8,17 +7,17 @@
     width: 100%;
     margin-bottom: 10px;
     background: grey;
-    padding: 10px;
     border-radius: 4px;
+    padding-top:0.8rem;
+    padding-bottom:0.8rem;
 }
 
 #accordion li label {
-    padding: 10px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    font-size: 18px;
     font-weight: 500;
+    padding-left:0.8rem;
     cursor: pointer;
     color: #c20000;
 }
@@ -44,7 +43,3 @@
     max-height: 400px;
 }
 
-.planetInfo1 img {
-    height: 10rem;
-    width: auto;
-}

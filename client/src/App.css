@@ -12,6 +12,9 @@ body {
     position: relative;
     z-index: 2;
 }
+h1{
+    color:white
+}
 a {
     text-decoration: none;
     color: black;
