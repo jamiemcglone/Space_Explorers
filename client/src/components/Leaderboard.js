@@ -21,6 +21,13 @@ const LeaderboardItem = styled.li`
     margin: 5px;
     width: 12%;
     `
+
+const LeaderboardTitle = styled.h1`
+    text-align: center;
+    color: whitesmoke;
+    font-size: 2rem;
+    margin: 5px;
+`
     const sortedPlayers = players.sort((a, b) => (a.score < b.score) ? 1 : ((b.score < a.score) ? -1 : 0))
 
     const playersToDisplay = sortedPlayers.map((player) => {
@@ -30,7 +37,12 @@ const LeaderboardItem = styled.li`
             </LeaderboardItem>
         );
     });
-    return <LeadberboardContainer>{playersToDisplay}</LeadberboardContainer>;
+    return (
+    <>
+        <LeaderboardTitle>Game Leaderboard</LeaderboardTitle>
+        <LeadberboardContainer>{playersToDisplay}</LeadberboardContainer>
+    </>
+    )
 };
 
 export default Leaderboard;
