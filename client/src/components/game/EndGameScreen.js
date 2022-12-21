@@ -1,32 +1,60 @@
-import React from 'react';
+import { useState } from 'react';
+import styled from 'styled-components';
+import PlayerService from '../../service/PlayerService';
 
-<input
-          className="text-center"
-          type="text"
-          placeholder="Name"
-          id="nameInput"
-          name="nameInput"
-          required
-        />
+const EndGameContainer = styled.div`
+    position: absolute;
+    background-color: gray;
+    border-radius: 5px;
+    width: 60%;
+    height: 35%;
+    left: 20%;
+    top: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+`;
+const AddPlayerForm = styled.form`
+    display: flex;
+    gap:15px;
+    justify-content:center;
+    align-items: center;
+    height: 2rem;
+`;
+const EndGameBtn = styled.button`
+    background-color: white;
+    width: 10rem;
+    height: 2rem;
+    border-radius: 5px;
+    color: black;
+`;
 
-const EndGameScreen = ({restartGame, score}) => {
-    
-const handleSubmit =(event) =>{
-    event.preventDefault()
-    console.log("event")
-}
+const EndGameScreen = ({ restartGame, score }) => {
+    const [name, setName] = useState('');
+    const handleNameChange = (event) => setName(event.target.value);
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        PlayerService.addPlayer({
+            name: name,
+            score: score,
+        });
+        restartGame();
+    };
     return (
-        <div className = "end-game-screen">
-            Congratulations you completed the game would you like to get added to our Leaderboard or
-            try again.
-          <form onSubmit ={handleSubmit}>
-                <label htmlFor="name">Player Name:</label>
-                <input type="text" id="name" name="name" value="name"/>
-                <button type="submit" name="submit" value="Add to the Leaderboard"></button>
-          </form>
-            <button onClick={restartGame}>try again</button>
-
-        </div>
+        <EndGameContainer>
+            Congratulations! You completed the game. Would you like to:
+            <EndGameBtn onClick={restartGame}>try again</EndGameBtn>
+            Or get added to our Leaderboard
+            <AddPlayerForm onSubmit={handleSubmit}>
+                
+                <input onChange={handleNameChange} type='text' id='name' name='name' value={name} placeholder="Add your Player Name" />
+                <EndGameBtn type='submit' name='submit' value='Add to the Leaderboard'>
+                    Add to Leaderboard
+                </EndGameBtn>
+            </AddPlayerForm>
+        </EndGameContainer>
     );
 };
 

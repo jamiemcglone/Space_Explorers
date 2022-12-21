@@ -1,7 +1,5 @@
 import React from 'react';
 import Planet from './Planet';
-import { useState } from 'react';
-// import { useState } from 'react';
 import styled from 'styled-components';
 
 const PlanetList = ({ planets }) => {
@@ -17,8 +15,8 @@ const PlanetNavBar = styled.ul`
     flex-direction: row;
     justify-content: flex-start;
     list-style: none;
-    gap:50px;
-    overflow-x:scroll;
+    gap: 50px;
+    overflow-x: scroll;
 `;
 
 export default PlanetList;

@@ -1,10 +1,9 @@
-#accordion{
+#accordion {
     margin: 20px;
     width: 800px;
-
 }
 
-#accordion li{
+#accordion li {
     list-style: none;
     width: 100%;
     margin-bottom: 10px;
@@ -13,7 +12,7 @@
     border-radius: 4px;
 }
 
-#accordion li label{
+#accordion li label {
     padding: 10px;
     display: flex;
     align-items: center;
@@ -24,17 +23,16 @@
     color: #c20000;
 }
 
-#accordion li label span{
+#accordion li label span {
     font-size: 22px;
     color: #333;
 }
 
-#accordion label + input[type="radio"]{
+#accordion label + input[type='radio'] {
     display: none;
-
 }
 
-#accordion .content{
+#accordion .content {
     padding: 0 10px;
     line-height: 26px;
     max-height: 0;
@@ -42,11 +40,11 @@
     transition: max-height 0.5s;
 }
 
-#accordion label + input[type="radio"]:checked + .content{
+#accordion label + input[type='radio']:checked + .content {
     max-height: 400px;
 }
 
 .planetInfo1 img {
     height: 10rem;
-    width: auto
+    width: auto;
 }

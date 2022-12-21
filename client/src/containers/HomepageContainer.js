@@ -4,28 +4,19 @@ import PlayGameButton from '../components/PlayGameButton';
 import Leaderboard from '../components/Leaderboard';
 import PlayerService from '../service/PlayerService';
 import styled from 'styled-components';
-import { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react';
 
-
-
-const HomepageContainer = ({planets}) => {
-    const [allPlayers,setAllPlayers] = useState([]);
+const HomepageContainer = ({ planets }) => {
+    const [allPlayers, setAllPlayers] = useState([]);
     useEffect(() => {
-        PlayerService.getPlayers().then(players =>setAllPlayers(players))
+        PlayerService.getPlayers().then((players) => setAllPlayers(players));
     }, []);
-    
-    console.log(allPlayers) 
 
-    // const [planets, setPlanets] = useState([])
-
-    // useEffect(() => {
-    //   PlanetService.getPlanets()
-    //     .then(planets => setPlanets(planets))
-    // }, [])
+    console.log(allPlayers);
 
     return (
         <main>
-            <Navigation planets = {planets}/>
+            <Navigation planets={planets} />
             <Leaderboard players={allPlayers} />
             <PlayGameButton />
         </main>
