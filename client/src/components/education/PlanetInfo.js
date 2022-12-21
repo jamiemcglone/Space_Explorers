@@ -1,4 +1,4 @@
-import { useEffect, useState, useCallback, useRef } from 'react';
+import { useState } from 'react';
 // import {useHistory} from "react-router-dom";
 import React from 'react';
 import styled from 'styled-components';
@@ -7,47 +7,45 @@ import './PlanetInfo.css';
 const PlanetInfo = ({ planet }) => {
     const [randomIndex, setRandomIndex] = useState(0);
 
-    // if (!planet) return null
 
     const SectionContainer = styled.div`
         display: flex;
         flex-direction: column;
-        justify-content:center;
-        align-items:center;
-        width:80%;
-        margin:auto;
+        justify-content: center;
+        align-items: center;
+        height: 25%;
+        width: 80%;
+        margin: auto;
     `;
     const PlanetInfoWrapper = styled.div`
         display: flex;
-        width:100%;
+        width: 100%;
+        height: 100%;
+        gap: 1rem;
     `;
 
-    const Div1 = styled.div`
-        background: grey;
+    const PlanetFlexItem = styled.div`
         display: flex;
-        justify-content:center;
-        items-align:center;
+        border-radius: 5px;
         width: 50%;
-        margin: 2rem;
-        border-radius: 4px;
+        background-color: gray;
+        height: auto;
     `;
+
     const AccordionButtonsWrapper = styled.div`
         display: flex;
         flex-direction: column;
-        gap:2rem;
-        width:100%;
-    `;
-    const IMG = styled.img`
-        height: 10rem;
-        width: auto;
-        margin:auto
+        gap: 2rem;
+        width: 100%;
     `;
 
-    const RandomImage = styled.img`
-        height: 10rem;
-        width: auto;
+    const PlanetImage = styled.img`
+        width: 50%;
+        object-fit: cover;
     `;
-
+    const RandomizerBtn = styled.button`
+        width: 50%;
+    `;
     const randomGenerator = () => {
         const random = Math.floor(Math.random() * planet.alt_images.length);
         setRandomIndex(random);
@@ -57,17 +55,16 @@ const PlanetInfo = ({ planet }) => {
         <SectionContainer>
             <h1>{planet.name}</h1>
             <PlanetInfoWrapper>
-                <Div1 >
-                    <IMG src={planet.image} alt='planet' />
-                    <div>
-                        <p>{planet.planet_bio}</p>
-                    </div>
-                </Div1>
-                <Div1>
-                    <button onClick={randomGenerator}>Click me for a random image!</button>
-                    {/* <img>{planet.alt_images[randomIndex - 1]}</p> */}
-                    <RandomImage src={planet.alt_images[randomIndex]} alt='Random-Image' />
-                </Div1>
+                <PlanetFlexItem>
+                    <PlanetImage src={planet.image} alt='planet' />
+                    <div>{planet.planet_bio}</div>
+                </PlanetFlexItem>
+                <PlanetFlexItem>
+                    <RandomizerBtn onClick={randomGenerator}>
+                        Click me for a random image!
+                    </RandomizerBtn>
+                    <PlanetImage src={planet.alt_images[randomIndex]} alt='Random-Image' />
+                </PlanetFlexItem>
             </PlanetInfoWrapper>
             <AccordionButtonsWrapper>
                 <ul id='accordion'>
