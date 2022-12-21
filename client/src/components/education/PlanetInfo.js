@@ -26,9 +26,12 @@ const PlanetInfo = ({ planet }) => {
     const PlanetFlexItem = styled.div`
         display: flex;
         border-radius: 5px;
+        height:35vh;
+        max-height: 35vh;
         width: 50%;
         background-color: gray;
         height: auto;
+        overflow:auto;
     `;
 
     const AccordionButtonsWrapper = styled.div`
@@ -40,6 +43,7 @@ const PlanetInfo = ({ planet }) => {
 
     const PlanetImage = styled.img`
         width: 50%;
+        height: 35vh;
         object-fit: cover;
     `;
     const RandomizerBtn = styled.button`

@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
 
 const SolarSystem = () => {
     const SolarContainer = styled.div`
@@ -26,9 +25,9 @@ const SolarSystem = () => {
         width: 40%;
         background-color: gray;
         height: 40vh;
-        overflow: scroll;
         padding-left: 1rem;
         padding-right: 1rem;
+        overflow:auto;
     `;
 
     const AccordionButtonsWrapper = styled.div`
