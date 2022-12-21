@@ -37,6 +37,8 @@
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.5s;
+    overflow: scroll;
+    height: 6rem;
 }
 
 #accordion label + input[type='radio']:checked + .content {

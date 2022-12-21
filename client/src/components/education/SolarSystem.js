@@ -1,39 +1,67 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-import NasaAPIkey from './../../config.js'
-import { useState } from 'react';
 
 
 const SolarSystem = () => {
 
-    const [imageToDisplay, setImageToDisplay] = useState("");
-  const PictureOfDay = function() {
-    fetch(`https://api.nasa.gov/planetary/apod?api_key=${NasaAPIkey}`)
-    .then(res => res.json())
-    .then(imageToDisplay => setImageToDisplay(imageToDisplay.url))
-  }
+    const SolarContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 25%;
+    width: 80%;
+    margin: auto;
+`;
+const SolarInfoWrapper = styled.div`
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    gap: 1rem;
+`;
 
-  useEffect(() => {
-    PictureOfDay();
-  }, [])
+const SolarFlexItem = styled.div`
+    display: flex;
+    border-radius: 5px;
+    width: 40%;
+    background-color: gray;
+    height: 40vh;
+    overflow: scroll;
+    padding-left: 1rem;
+    padding-right: 1rem;
+`;
+
+const AccordionButtonsWrapper = styled.div`
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 100%;
+`;
+
+const SolarImage = styled.img`
+        height: 40vh;
+        object-fit: cover;
+        border-radius: 5px;
+    `
 
     return (
         <>
-        <Link to='/solarsystem'>Solar System</Link>;
-            <div>
+            <SolarContainer>
                 <h1>The Solar System</h1>
-                    <div>
-                        <div>
-                            <img src="./client/src/image/solarsystem.gif" alt="pictureOfSolarSystem"/>
-                            <p>The Solar System is the gravitationally bound system of the Sun and the objects that orbit it. It formed 4.6 billion years ago from the gravitational collapse of a giant interstellar molecular cloud. The vast majority (99.86%) of the system's mass is in the Sun, with most of the remaining mass contained in the planet Jupiter. The four inner system planets—Mercury, Venus, Earth and Mars—are terrestrial planets, being composed primarily of rock and metal. The four giant planets of the outer system are substantially larger and more massive than the terrestrials. The two largest, Jupiter and Saturn, are gas giants, being composed mainly of hydrogen and helium; the next two, Uranus and Neptune, are ice giants, being composed mostly of volatile substances with relatively high melting points compared with hydrogen and helium, such as water, ammonia, and methane. All eight planets have nearly circular orbits that lie near the plane of Earth's orbit, called the ecliptic.</p>
-                        </div>
-                        <div>
-                        <img src={imageToDisplay} alt="astronomy-picture" />
-                        </div>
+                    <SolarInfoWrapper>
+                       
+                            <SolarImage src="./images/solarsystem.gif" alt="pictureOfSolarSystem"/>
+                    
+                            <SolarFlexItem>
 
-                    </div>
-                    <div>
+                            <p>The Solar System is the gravitationally bound system of the Sun and the objects that orbit it. It formed 4.6 billion years ago from the gravitational collapse of a giant interstellar molecular cloud. The vast majority (99.86%) of the system's mass is in the Sun, with most of the remaining mass contained in the planet Jupiter. The four inner system planets—Mercury, Venus, Earth and Mars—are terrestrial planets, being composed primarily of rock and metal. The four giant planets of the outer system are substantially larger and more massive than the terrestrials. The two largest, Jupiter and Saturn, are gas giants, being composed mainly of hydrogen and helium; the next two, Uranus and Neptune, are ice giants, being composed mostly of volatile substances with relatively high melting points compared with hydrogen and helium, such as water, ammonia, and methane. All eight planets have nearly circular orbits that lie near the plane of Earth's orbit, called the ecliptic.</p>
+                       
+                       
+                        </SolarFlexItem>
+                    </SolarInfoWrapper>
+                    <AccordionButtonsWrapper>
                         <ul id='accordion'>
                             <li>
                                 <label htmlFor='first'>
@@ -78,8 +106,8 @@ const SolarSystem = () => {
                                 </div>
                             </li>
                         </ul>
-                    </div>
-            </div>
+                    </AccordionButtonsWrapper>
+            </SolarContainer>
         </>
     );
 };
