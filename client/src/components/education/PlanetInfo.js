@@ -5,38 +5,42 @@ import styled from 'styled-components';
 import './PlanetInfo.css';
 
 const PlanetInfo = ({ planet }) => {
-
     const [randomIndex, setRandomIndex] = useState(0);
-
-
 
     // if (!planet) return null
 
-    const Div0 = styled.div`
+    const SectionContainer = styled.div`
         display: flex;
+        flex-direction: column;
+        justify-content:center;
+        align-items:center;
+        width:80%;
+        margin:auto;
+    `;
+    const PlanetInfoWrapper = styled.div`
+        display: flex;
+        width:100%;
     `;
 
     const Div1 = styled.div`
         background: grey;
         display: flex;
-        width: 30rem;
+        justify-content:center;
+        items-align:center;
+        width: 50%;
         margin: 2rem;
         border-radius: 4px;
     `;
-    const Div2 = styled.div`
-        background: grey;
-        display: flex;
-        width: 30rem;
-        margin: 2rem;
-        border-radius: 4px;
-    `;
-    const Div3 = styled.div`
+    const AccordionButtonsWrapper = styled.div`
         display: flex;
         flex-direction: column;
+        gap:2rem;
+        width:100%;
     `;
     const IMG = styled.img`
         height: 10rem;
         width: auto;
+        margin:auto
     `;
 
     const RandomImage = styled.img`
@@ -45,29 +49,27 @@ const PlanetInfo = ({ planet }) => {
     `;
 
     const randomGenerator = () => {
-
-            const random = Math.floor(Math.random() * planet.alt_images.length);
-            setRandomIndex(random);
-    }
+        const random = Math.floor(Math.random() * planet.alt_images.length);
+        setRandomIndex(random);
+    };
 
     return (
-        <>
-            <Div0>
-                <h3>{planet.name}</h3>
-                <Div1 className='planetInfo1'>
-                    <img src={planet.image} alt='planet' />
+        <SectionContainer>
+            <h1>{planet.name}</h1>
+            <PlanetInfoWrapper>
+                <Div1 >
+                    <IMG src={planet.image} alt='planet' />
                     <div>
-                        <h4>{planet.name}</h4>
                         <p>{planet.planet_bio}</p>
                     </div>
                 </Div1>
-                <Div2>
+                <Div1>
                     <button onClick={randomGenerator}>Click me for a random image!</button>
                     {/* <img>{planet.alt_images[randomIndex - 1]}</p> */}
                     <RandomImage src={planet.alt_images[randomIndex]} alt='Random-Image' />
-                </Div2>
-            </Div0>
-            <Div3>
+                </Div1>
+            </PlanetInfoWrapper>
+            <AccordionButtonsWrapper>
                 <ul id='accordion'>
                     <li>
                         <label htmlFor='first'>
@@ -104,8 +106,8 @@ const PlanetInfo = ({ planet }) => {
                         </div>
                     </li>
                 </ul>
-            </Div3>
-        </>
+            </AccordionButtonsWrapper>
+        </SectionContainer>
     );
 };
 
