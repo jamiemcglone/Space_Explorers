@@ -3,7 +3,6 @@ import Navigation from '../components/Navigation';
 import PlayGameButton from '../components/PlayGameButton';
 import Leaderboard from '../components/Leaderboard';
 import PlayerService from '../service/PlayerService';
-import SolarSystem from '../components/education/SolarSystem';
 import styled from 'styled-components';
 import { useState, useEffect } from 'react';
 
@@ -23,7 +22,6 @@ const HomepageContainer = ({ planets }) => {
 
     return (
         <main>
-            <SolarSystem />
             <Navigation planets={planets} />
             <LeaderboardAndGameFlexContainer>
                 <Leaderboard players={allPlayers} />
