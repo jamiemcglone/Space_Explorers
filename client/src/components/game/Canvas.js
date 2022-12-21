@@ -11,7 +11,7 @@ const GameContainer = styled.div`
     height: 550px;
     margin: auto;
     position: relative;
-    border:2px solid gray;
+    border: 2px solid gray;
 `;
 
 const Planet = styled.img.attrs((props) => props)`
@@ -25,7 +25,7 @@ const GameButton = styled.button`
     position: absolute;
     background: grey;
     padding: 10px;
-    width:10rem;
+    width: 10rem;
     border-radius: 4px;
     top: 510px;
     left: 840px;
@@ -130,7 +130,7 @@ const Canvas = ({ planets }) => {
                     />
                 ) : null}
                 <GameButton onClick={handleGameOverClick}>End Game</GameButton>
-                <Score >Current score: {score}</Score>
+                <Score>Current score: {score}</Score>
                 {gameOver ? (
                     <EndGameScreen
                         handleGameOverClick={handleGameOverClick}

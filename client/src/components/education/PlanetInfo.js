@@ -7,7 +7,6 @@ import './PlanetInfo.css';
 const PlanetInfo = ({ planet }) => {
     const [randomIndex, setRandomIndex] = useState(0);
 
-
     const SectionContainer = styled.div`
         display: flex;
         flex-direction: column;

@@ -4,27 +4,23 @@ import PlayGameButton from '../components/PlayGameButton';
 import Leaderboard from '../components/Leaderboard';
 import PlayerService from '../service/PlayerService';
 import styled from 'styled-components';
-import NasaAPIkey from './../config.js'
+import NasaAPIkey from './../config.js';
 import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 
 const HomepageContainer = ({ planets }) => {
     const [allPlayers, setAllPlayers] = useState([]);
-    const [imageToDisplay, setImageToDisplay] = useState("");
+    const [imageToDisplay, setImageToDisplay] = useState('');
     useEffect(() => {
         PlayerService.getPlayers().then((players) => setAllPlayers(players));
         PictureOfDay();
     }, []);
 
-
-
     const PictureOfDay = function () {
         fetch(`https://api.nasa.gov/planetary/apod?api_key=${NasaAPIkey}`)
-            .then(res => res.json())
-            .then(imageToDisplay => setImageToDisplay(imageToDisplay.url))
-    }
-
-
+            .then((res) => res.json())
+            .then((imageToDisplay) => setImageToDisplay(imageToDisplay.url));
+    };
 
     const HomePageWrapper = styled.div`
         display: flex;
@@ -32,7 +28,7 @@ const HomepageContainer = ({ planets }) => {
         width: 100%;
         height: 100%;
         gap: 1rem;
-        `;
+    `;
 
     const ImageFlexItem = styled.div`
         display: flex;
@@ -49,7 +45,6 @@ const HomepageContainer = ({ planets }) => {
         object-fit: cover;
         border-radius: 5px;
         border: 1px solid yellow;
-
     `;
 
     const LeaderboardAndGameFlexContainer = styled.div`
@@ -72,14 +67,15 @@ const HomepageContainer = ({ planets }) => {
         font-size: 1.05rem;
     `;
 
-
     return (
         <main>
             <Navigation planets={planets} />
             <HomePageWrapper>
                 <ImageFlexItem>
-                    <Image src={imageToDisplay} alt="astromony picture" />
-                    <Link to="/solarsystem"><SolarButton>Learn more about the Solar System</SolarButton></Link>
+                    <Image src={imageToDisplay} alt='astromony picture' />
+                    <Link to='/solarsystem'>
+                        <SolarButton>Learn more about the Solar System</SolarButton>
+                    </Link>
                 </ImageFlexItem>
                 <LeaderboardAndGameFlexContainer>
                     <Leaderboard players={allPlayers} />

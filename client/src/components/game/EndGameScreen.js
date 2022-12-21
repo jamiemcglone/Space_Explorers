@@ -18,8 +18,8 @@ const EndGameContainer = styled.div`
 `;
 const AddPlayerForm = styled.form`
     display: flex;
-    gap:15px;
-    justify-content:center;
+    gap: 15px;
+    justify-content: center;
     align-items: center;
     height: 2rem;
 `;
@@ -48,8 +48,14 @@ const EndGameScreen = ({ restartGame, score }) => {
             <EndGameBtn onClick={restartGame}>try again</EndGameBtn>
             Or get added to our Leaderboard
             <AddPlayerForm onSubmit={handleSubmit}>
-                
-                <input onChange={handleNameChange} type='text' id='name' name='name' value={name} placeholder="Add your Player Name" />
+                <input
+                    onChange={handleNameChange}
+                    type='text'
+                    id='name'
+                    name='name'
+                    value={name}
+                    placeholder='Add your Player Name'
+                />
                 <EndGameBtn type='submit' name='submit' value='Add to the Leaderboard'>
                     Add to Leaderboard
                 </EndGameBtn>

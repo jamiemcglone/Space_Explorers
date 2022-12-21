@@ -19,10 +19,10 @@ const QuestionContainer = styled.div`
 
 const QuestionForm = styled.form`
     display: flex;
-    flex-direction:column;
-    justify-content:center;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    
+
     height: 2rem;
 `;
 

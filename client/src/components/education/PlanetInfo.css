@@ -1,5 +1,5 @@
 #accordion {
-    padding-inline-start:0;
+    padding-inline-start: 0;
 }
 
 #accordion li {
@@ -8,8 +8,8 @@
     margin-bottom: 10px;
     background: grey;
     border-radius: 4px;
-    padding-top:0.8rem;
-    padding-bottom:0.8rem;
+    padding-top: 0.8rem;
+    padding-bottom: 0.8rem;
 }
 
 #accordion li label {
@@ -17,7 +17,7 @@
     align-items: center;
     justify-content: space-between;
     font-weight: 500;
-    padding-left:0.8rem;
+    padding-left: 0.8rem;
     cursor: pointer;
     color: #c20000;
 }
@@ -44,4 +44,3 @@
 #accordion label + input[type='radio']:checked + .content {
     max-height: 400px;
 }
-

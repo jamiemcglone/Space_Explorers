@@ -2,11 +2,10 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
-
 const StartGame = styled.div`
     background: grey;
     padding: 10px;
-    width:10rem;
+    width: 10rem;
     border-radius: 4px;
     text-decoration: none;
     text-align: center;
@@ -14,8 +13,11 @@ const StartGame = styled.div`
 `;
 
 const PlayGameButton = () => {
-
-    return <Link to='/game' class="startGameButton"><StartGame>Play a game</StartGame>  </Link>;
+    return (
+        <Link to='/game' class='startGameButton'>
+            <StartGame>Play a game</StartGame>{' '}
+        </Link>
+    );
 };
 
 export default PlayGameButton;

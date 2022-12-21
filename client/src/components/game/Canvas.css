@@ -1,33 +1,28 @@
-
-.end-game-screen{
+.end-game-screen {
     background: white;
 }
-.player{
-    background-color:white;
-    width:50px;
-    height:50px;
-    position:relative;
-    top:50px;
-    left:50px;
-    position:absolute
+.player {
+    background-color: white;
+    width: 50px;
+    height: 50px;
+    position: relative;
+    top: 50px;
+    left: 50px;
+    position: absolute;
 }
 
-
-
-
-.question{
+.question {
     background-color: white;
-    position:absolute;
-    top:500px;
-    left:450px;
-
+    position: absolute;
+    top: 500px;
+    left: 450px;
 }
 
-.game-over-button{
-    width:50px;
-    height:50px;
+.game-over-button {
+    width: 50px;
+    height: 50px;
     background-color: white;
-    position:absolute;
-    right:50px;
-    bottom:50px;
+    position: absolute;
+    right: 50px;
+    bottom: 50px;
 }
