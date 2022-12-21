@@ -8,9 +8,9 @@ const PlanetInfo = ({planet}) => {
 
     const [randomIndex, setRandomIndex] = useState(0);
 
-    useEffect(() => {
-        randomGenerator()
-    }, [randomIndex])
+    // useEffect(() => {
+    //     randomGenerator()
+    // }, [randomIndex])
 
     // if (!planet) return null
 
@@ -48,16 +48,9 @@ const PlanetInfo = ({planet}) => {
     `
 
     const randomGenerator = () => {
-        
-        const getRandomNumber = () => {
             const random = Math.floor(Math.random() * planet.alt_images.length);
-            console.log(random)
-            return random;
-        }
-        
-        setRandomIndex(getRandomNumber());
-
-
+            setRandomIndex(random);
+            console.log(random);
     }
 
     return (
