@@ -12,13 +12,21 @@ const HomepageContainer = ({ planets }) => {
         PlayerService.getPlayers().then((players) => setAllPlayers(players));
     }, []);
 
-    console.log(allPlayers);
+    const LeaderboardAndGameFlexContainer = styled.div`
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        flex-wrap: nowrap;
+    `
 
     return (
         <main>
             <Navigation planets={planets} />
-            <Leaderboard players={allPlayers} />
-            <PlayGameButton />
+            <LeaderboardAndGameFlexContainer>
+                <Leaderboard players={allPlayers} />
+                <PlayGameButton />
+            </LeaderboardAndGameFlexContainer>
         </main>
     );
 };
