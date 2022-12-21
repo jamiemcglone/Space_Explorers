@@ -4,6 +4,7 @@ import HomepageContainer from './HomepageContainer'
 import GameContainer from './GameContainer';
 import PlanetInfo from '../components/education/PlanetInfo';
 import PlanetService from '../service/PlanetService';
+import SolarSystem from '../components/education/SolarSystem';
 import { useLocation } from 'react-router-dom';
 import { useEffect,useState } from 'react';
 
@@ -34,6 +35,7 @@ const Main = () => {
             <Routes location={displayLocation}>
                     <Route path='/' element={<HomepageContainer planets={allPlanets} />} />
                     <Route path='/game' element={<GameContainer planets={allPlanets} />} />
+                    <Route path='/solarsystem' element={<SolarSystem planet={allPlanets} />} />
                     <Route
                         path='/sun'
                         element={allPlanets[0] ? <PlanetInfo planet={allPlanets[0]} /> : null}
