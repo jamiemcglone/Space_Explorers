@@ -8,8 +8,6 @@ const StartGame = styled.div`
     padding: 10px;
     width:10rem;
     border-radius: 4px;
-    top: 510px;
-    left: 840px;
     text-decoration: none;
     text-align: center;
     margin: auto;

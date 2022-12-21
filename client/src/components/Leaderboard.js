@@ -19,7 +19,8 @@ const LeaderboardItem = styled.li`
     border: yellow 1px solid;
     padding: 5px;
     margin: 5px;
-    width: 12%;
+    width: 50%;
+    border-radius: 5px;
     `
 
 const LeaderboardTitle = styled.h1`
