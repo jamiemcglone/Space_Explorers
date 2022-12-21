@@ -1,10 +1,4 @@
-.game-container{
-    background-color: transparent;
-    width:1000px;
-    height:550px;
-    margin:auto;
-    position:relative
-}
+
 .end-game-screen{
     background: white;
 }
@@ -18,11 +12,7 @@
     position:absolute
 }
 
-.target{
-    background-color: red;
-    width:50px;
-    height:50px;
-}
+
 
 
 .question{

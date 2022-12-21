@@ -1,27 +1,27 @@
 body {
     margin: 0;
     padding: 0;
-    height:100%;
+    height: 100%;
     background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
     /* overflow:hidden */
 }
 .App {
     height: 100vh;
     background-color: transparent;
-    position:relative;
-    z-index:2;
+    position: relative;
+    z-index: 2;
 }
 a {
     text-decoration: none;
 }
-.wrapper-animation{
-  position:absolute;
-  top:0;
-  left:0;
-  overflow:hidden;
-  height:100%;
-  width:100%;
-  z-index:1;
+.wrapper-animation {
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
 }
 .logo {
     color: transparent;

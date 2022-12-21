@@ -1,17 +1,3 @@
-.imageContainer {
-    position: relative;
-    text-align: center;
-    padding: 1rem;
-  }
-
-  .imageContainer img:hover {
-    transform: scale(1.1);
-    filter: drop-shadow(3px 5px 6px rgb(53, 53, 240));
-    /* background-repeat: repeat; */
-    
-  }
-
-
 /* .centerWords{
     position: absolute;
   top: 50%;
@@ -31,15 +17,14 @@
     -webkit-text-fill-color: transparent;
   } */
 
-  
-  @keyframes flow {
+@keyframes flow {
     0% {
-      background-position: 0 50%;
+        background-position: 0 50%;
     }
     50% {
-      background-position: 100% 50%;
+        background-position: 100% 50%;
     }
     100% {
-      background-position: 0 50%;
+        background-position: 0 50%;
     }
-  }
+}
