@@ -15,6 +15,7 @@ const Img = styled.img`
     &:hover {
         transform: scale(1.1);
         filter: drop-shadow(3px 5px 6px rgb(53, 53, 240));
+        transition: 0.3s;
     }
 `;
 const ImgContainer = styled.div`
