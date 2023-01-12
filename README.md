@@ -1,6 +1,6 @@
  # Space Explorers Educational Game
 
-A full stack application developed on ReactJS on the front-end and MongoDB and Express on the back-end.
+A full stack application developed on ReactJS on the front-end and MongoDB and Express on the back-end. Developed in a team of 4 people following Agile methodologies in the span of 1 week. 
 
 ## Contents 
 
