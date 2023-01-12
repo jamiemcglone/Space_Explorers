@@ -36,21 +36,22 @@ const HomepageContainer = ({ planets }) => {
         border-radius: 5px;
         width: 30%;
         background-color: transparent;
-        height: auto;
         gap: 0.5rem;
     `;
 
     const Image = styled.img`
-        height: 100%;
+        height: auto;
         object-fit: cover;
         border-radius: 5px;
         border: 1px solid yellow;
+        height:35vh
     `;
+
 
     const LeaderboardAndGameFlexContainer = styled.div`
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: left;
         align-content: center;
         flex-wrap: nowrap;
         width: 30%;
